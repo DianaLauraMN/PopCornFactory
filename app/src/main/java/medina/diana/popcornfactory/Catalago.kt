@@ -13,14 +13,14 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class Catalago : AppCompatActivity() {
-    var adapter: PeliculaAdapter?=null
     var peliculas=ArrayList<Pelicula>()
-    val gridView: GridView= findViewById(R.id.gridView)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_catalago)
-
+        var adapter: PeliculaAdapter?=null
+        val gridView: GridView= findViewById(R.id.gridView)
         cargaPeliculas()
         adapter=PeliculaAdapter(peliculas, this)
         gridView.adapter=adapter
